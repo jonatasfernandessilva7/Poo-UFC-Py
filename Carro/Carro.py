@@ -1,10 +1,5 @@
 class Carro:
-    __modelo = None
-    __ano = None
-    __cor = None
-    __velocidade = 0
-
-    def __init__(self, modelo, ano, cor, velocidade):
+    def __init__(self, modelo:str, ano:int, cor:str, velocidade:int):
         self.__modelo = modelo
         self.__ano = ano
         self.__cor = cor
@@ -19,6 +14,30 @@ class Carro:
     @carro.setter
     def carro(self, modelo):
         self.__modelo = modelo
+
+    @property
+    def ano(self):
+        return self.__ano
+
+    @ano.setter
+    def ano(self, ano):
+        self.__ano = ano
+    
+    @property
+    def cor(self):
+        return self.__cor
+
+    @cor.setter
+    def ano(self, cor):
+        self.__cor = cor
+
+    @property
+    def velocidade(self):
+        return self.__velocidade
+
+    @velocidade.setter
+    def velocidade(self, velo:int):
+        self.__velocidade = velo
 
     def printModelo(self):
         print("sou o {}".format(self.__modelo))
