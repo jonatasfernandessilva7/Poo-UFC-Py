@@ -1,17 +1,9 @@
-class Aluno:
+from Pessoa import Pessoa
 
-    __nome = None
-    __email = None
-    __matricula = None
-    _notas = None
-    _frequencia = None
-    _curso = None
-    _semestre = None
+class Aluno(Pessoa):
 
     def __init__(self, nome:str, email:str, matricula:str, notas:[], frequencia:{}, curso:str, semestre:int):
-        self.__nome = nome
-        self.__email = email
-        self.__matricula = matricula
+        Pessoa.__init__(nome, email, matricula)
         self._notas = notas
         self._frequencia = frequencia
         self._curso = curso
